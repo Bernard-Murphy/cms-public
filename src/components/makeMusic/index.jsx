@@ -232,6 +232,6 @@ const MakeMusic = ({
       </div>
     </div>
   );
-};
+}
 
 export default MakeMusic;
