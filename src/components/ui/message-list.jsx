@@ -12,7 +12,6 @@ export function MessageList({
       <div
         className="absolute h-full w-full"
         style={{
-          backgroundImage: `url("/hitler.png")`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",

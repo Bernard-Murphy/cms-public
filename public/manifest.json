@@ -1,6 +1,6 @@
 {
-  "short_name": "MyHitlerApp",
-  "name": "MyHitlerApp",
+  "short_name": "CMS",
+  "name": "CMS",
   "icons": [
     {
       "src": "icons/favicon-196x196.png",
@@ -34,8 +34,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://myhitlerapp.com/",
-  "scope": "https://myhitlerapp.com/",
+  "start_url": "https://createmusicfast.com/",
+  "scope": "https://createmusicfast.com/",
   "background_color": "#607D8B",
   "theme_color": "#607D8B",
   "display": "standalone",

@@ -34,8 +34,6 @@ const mongoUrl =
     process.env.MONGO_HOST +
     "/?retryWrites=true&w=majority";
 
-const hitlers = ["virgil", "chad", "hitler", "adolf"];
-
 const client = new MongoClient(mongoUrl);
 
 const port = process.env.SERVER_PORT;
@@ -47,7 +45,7 @@ const sessionStore = new MongoDBStore(session)({
   collection: "sessions",
 });
 const sessionConfig = {
-  name: "MyHitlerApp",
+  name: "cms-public",
   secret: process.env.COOKIE_SECRET,
   cookie: {
     maxAge: 1000 * 60 * 60 * 24 * 365,
@@ -83,4 +81,4 @@ io.adapter(createAdapter(socketCollection));
 
 io.on("connection", (socket) => socketHandler(io, socket));
 
-server.listen(port, () => console.log("MyHitlerApp running on port", port));
+server.listen(port, () => console.log("cms public running on port", port));
