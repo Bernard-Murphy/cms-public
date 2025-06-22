@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
 import t from "@/lib/transitions";
-import MakeMusic from "@/components/MakeMusic";
+import MakeMusic from "@/components/makeMusic";
 import { io } from "socket.io-client";
 
 const socket = io(process.env.REACT_APP_API);
