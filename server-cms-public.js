@@ -1,7 +1,5 @@
 import dotenv from "dotenv";
 import express from "express";
-import OpenAI from "openai";
-import Groq from "groq-sdk";
 import cors from "cors";
 import http from "http";
 import fileUpload from "express-fileupload";

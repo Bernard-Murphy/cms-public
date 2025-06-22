@@ -1,12 +1,25 @@
-# React + Vite
+# Create Music Fast
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Requirements
 
-Currently, two official plugins are available:
+- Mureka account with API access
+- MongoDB
+- Storj (s3 alternative)
+- Venice AI account with API access
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Environment (.env)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+STORJ_SECRET_ACCESS_ID
+STORJ_SECRET_ACCESS_KEY
+STORJ_ENDPOINT
+BUCKET
+REGION => i.e. "us-east-1"
+VENICE_KEY => Venice API key
+MUREKA_KEY => Mureka API key
+SERVER_PORT => App will run on this port
+MONGO_URL => Required if no MONGO_HOST, MONGO_PASSWORD, and MONGO_USER is supplied, i.e. "mongodb://127.0.0.1:27017"
+MONGO_HOST => Required if no MONGO_URL supplied, i.e. "cluster0.lcsembg.mongodb.net"
+MONGO_PASSWORD => Required if no MONGO_URL supplied
+MONGO_USER => Required if no MONGO_URL supplied, i.e. "production"
+COOKIE_SECRET
+REACT_APP_API => String, URL of the backend app, i.e. "https://createmusicfast.com"
