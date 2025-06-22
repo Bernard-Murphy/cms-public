@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
 import t from "@/lib/transitions";
-import MakeRacistMusic from "@/components/makeRacistMusic";
+import MakeMusic from "@/components/MakeMusic";
 import { io } from "socket.io-client";
 
 const socket = io(process.env.REACT_APP_API);
@@ -58,10 +58,7 @@ const App = () => {
   } = useChat(options);
 
   useEffect(() => {
-    axios
-      .get(process.env.REACT_APP_API + "/init")
-      .then((res) => setMessages(res.data.messages))
-      .catch((err) => console.log("error initializing chat", err));
+    
     socket.on("lyrics", (lyrics) => {
       console.log("lyrics", lyrics, lyrics.split("\n"));
       setMusicStatus(`Generating song`)
@@ -151,8 +148,7 @@ const App = () => {
       class={`p-4 h-screen relative ${page === "ask" ? "overflow-hidden" : ""}`}
     >
       <AnimatePresence>
-        {page === "music" ? (
-          <motion.section
+       <motion.section
             transition={t.transition}
             exit={t.fade_out_scale_1}
             animate={t.normalize}
@@ -160,7 +156,7 @@ const App = () => {
             className="h-full w-full"
             key="music"
           >
-            <MakeRacistMusic
+            <MakeMusic
               lyrics={lyrics}
               makeSong={makeSong}
               musicPrompt={musicPrompt}
@@ -178,30 +174,6 @@ const App = () => {
               setUseCustomMusicStyle={setUseCustomMusicStyle}
             />
           </motion.section>
-        ) : (
-          <motion.div
-            transition={t.transition}
-            exit={t.fade_out_scale_1}
-            animate={t.normalize}
-            initial={t.fade_out}
-            key="ask"
-            className="h-full w-full"
-          >
-            <Chat
-              messages={messages}
-              input={input}
-              handleInputChange={handleInputChange}
-              handleSubmit={handleSubmit}
-              isGenerating={isLoading}
-              stop={stop}
-              append={append}
-              transcribeAudio={transcribeAudio}
-              transcribing={transcribing}
-              cancelTranscription={() => setTranscribing(false)}
-              clearChat={clearChat}
-            />
-          </motion.div>
-        )}
       </AnimatePresence>
 
       <Toaster />

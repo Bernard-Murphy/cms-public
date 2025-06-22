@@ -16,7 +16,7 @@ import { toast } from "sonner";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label"
 
-const makeRacistMusic = ({
+const MakeMusic = ({
   makeSong,
   musicPrompt,
   setMusicPrompt,
@@ -234,4 +234,4 @@ const makeRacistMusic = ({
   );
 };
 
-export default makeRacistMusic;
+export default MakeMusic;
