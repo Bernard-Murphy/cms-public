@@ -4,6 +4,7 @@
 
 - Mureka account with API access
 - MongoDB
+- NodeJS
 - Storj (s3 alternative)
 - Venice AI account with API access
 
