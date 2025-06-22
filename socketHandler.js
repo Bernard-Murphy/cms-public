@@ -263,16 +263,6 @@ const socketHandler = (io, socket) => {
 
         const originalLyrics = lyrics;
 
-        lyrics = lyrics.replaceAll(/nigger/gi, "niggur");
-        lyrics = lyrics.replaceAll(/faggot/gi, "phag it");
-        lyrics = lyrics.replaceAll(/fag/gi, "phag");
-        lyrics = lyrics.replaceAll(/bitch/gi, "bidch");
-        lyrics = lyrics.replaceAll(/kike/gi, "qaiq");
-        lyrics = lyrics.replaceAll(/chink/gi, "chinq");
-        lyrics = lyrics.replaceAll(/cunt/gi, "kunt");
-        lyrics = lyrics.replaceAll(/spic/gi, "spik");
-        lyrics = lyrics.replaceAll(/gook/gi, "gooq");
-
         const songData = await murekaQuery(lyrics, musicStyle);
 
         const links = [];
