@@ -38,7 +38,7 @@ const hitlers = ["virgil", "chad", "hitler", "adolf"];
 
 const client = new MongoClient(mongoUrl);
 
-const port = process.env.SERVER_PORT || 1488;
+const port = process.env.SERVER_PORT;
 
 const app = express();
 const sessionStore = new MongoDBStore(session)({

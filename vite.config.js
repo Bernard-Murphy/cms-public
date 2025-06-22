@@ -17,21 +17,5 @@ export default defineConfig(({ mode }) => {
     define: {
       "process.env": env,
     },
-    server: {
-      proxy: {
-        "/trans": {
-          target: "http://localhost:1488/trans",
-        },
-        "/api/chat": {
-          target: "http://localhost:1488/ask",
-        },
-        "/clear": {
-          target: "http://localhost:1488/clear",
-        },
-        "/load-more": {
-          target: "http://localhost:1488/load-more",
-        },
-      },
-    },
   };
 });
