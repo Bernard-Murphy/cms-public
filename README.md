@@ -23,3 +23,9 @@ MONGO_PASSWORD => Required if no MONGO_URL supplied
 MONGO_USER => Required if no MONGO_URL supplied, i.e. "production"
 COOKIE_SECRET
 REACT_APP_API => String, URL of the backend app, i.e. "https://createmusicfast.com"
+
+### Instructions
+
+- npm install
+- npm run build
+- node server-cms-public.js
